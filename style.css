@@ -1,9 +1,7 @@
 .name {
     font-family: fantasy;
     font-size: 52px;
-    position: relative;
-    top: 100px;
-    left: 20% ;
+    text-align: center;
 }
 
 header {
@@ -12,6 +10,4 @@ header {
 
 .instagram {
     margin: 20px;
-    width: 80%;
-    height: 80%;
 }
