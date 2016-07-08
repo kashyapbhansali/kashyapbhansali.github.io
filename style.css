@@ -1,9 +1,13 @@
-h1 {
-    color: white;
+.name {
+    font-family: fantasy;
+    font-size: 52px;
+    position: relative;
+    top: 100px;
+    left: 20% ;
 }
 
 header {
-    background-color: black;
+
 }
 
 .instagram {
