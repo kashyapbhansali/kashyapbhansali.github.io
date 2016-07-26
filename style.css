@@ -22,3 +22,17 @@
     padding-top: 20%;
     width: 100%;
 }
+
+hr {
+    width: 0%;
+}
+
+@keyframes blink {
+    0% { opacity: 0.0;}
+    50% { opacity: 1.0; font-size: 14px;  }
+    100% { opacity: 0.0;}
+}
+
+.love {
+    animation: blink 3s infinite;
+}
