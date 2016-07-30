@@ -1,3 +1,13 @@
+:root {
+    --header-bg: #383838;
+    --header-text: #f8f8f8;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text)
+}
+
 .name {
     margin-top: 20%;
     text-align: center;
@@ -10,7 +20,6 @@
 
 .name > span {
     font-family: courier;
-    line-height: 100%;
 }
 
 .intro {
@@ -21,6 +30,7 @@
 .instagram {
     padding-top: 20%;
     width: 100%;
+    padding-bottom: 10%;
 }
 
 hr {
@@ -29,14 +39,15 @@ hr {
 
 @keyframes blink {
     0% { opacity: 1.0;
-        font-size: 15px;}
+        font-size: 16px;}
     50% { opacity: 1.0;
-        font-size: 17px;}
-    100% { opacity: 1.0;}
+        font-size: 22px;}
+    100% { opacity: 1.0;
+        font-size: 16px;}
 }
 
 .love {
     position: absolute;
-    padding: 2px;
+    padding: 1px;
     animation: blink 2.5s infinite;
 }
