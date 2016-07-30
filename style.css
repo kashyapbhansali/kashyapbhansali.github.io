@@ -37,18 +37,22 @@ header {
 }
 
 .love {
+    color: red;
     position: absolute;
-    padding: 1px;
+    padding: 1px 1px 1px 1px;
     animation: blink 2.5s infinite;
 }
 
 @keyframes blink {
     0% { opacity: 1.0;
-        font-size: 16px;}
+        font-size: 16px;
+        padding: 1px 1px 1px 1px;}
     50% { opacity: 1.0;
-        font-size: 22px;}
+        font-size: 22px;
+        padding: 0px 1px 1px 1px;}
     100% { opacity: 1.0;
-        font-size: 16px;}
+        font-size: 16px;
+        padding: 1px 1px 1px 1px;}
 }
 
 @keyframes fadein {
