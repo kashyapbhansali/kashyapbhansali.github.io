@@ -8,8 +8,9 @@
     font-size: 60px;
 }
 
-.name > h5 {
+.name > span {
     font-family: courier;
+    line-height: 100%;
 }
 
 .intro {
@@ -18,7 +19,6 @@
 }
 
 .instagram {
-    //margin-top: 10%;
     padding-top: 20%;
     width: 100%;
 }
@@ -28,11 +28,14 @@ hr {
 }
 
 @keyframes blink {
-    0% { opacity: 0.0;}
-    50% { opacity: 1.0; font-size: 14px;  }
-    100% { opacity: 0.0;}
+    0% { opacity: 1.0;}
+    50% { opacity: 1.0;
+        font-size: 12px;}
+    100% { opacity: 1.0;}
 }
 
 .love {
+    position: absolute;
+    padding: 5px;
     animation: blink 3s infinite;
 }
