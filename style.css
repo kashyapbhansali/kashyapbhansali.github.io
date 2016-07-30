@@ -28,14 +28,15 @@ hr {
 }
 
 @keyframes blink {
-    0% { opacity: 1.0;}
+    0% { opacity: 1.0;
+        font-size: 15px;}
     50% { opacity: 1.0;
-        font-size: 12px;}
+        font-size: 17px;}
     100% { opacity: 1.0;}
 }
 
 .love {
     position: absolute;
-    padding: 5px;
-    animation: blink 3s infinite;
+    padding: 2px;
+    animation: blink 2.5s infinite;
 }
