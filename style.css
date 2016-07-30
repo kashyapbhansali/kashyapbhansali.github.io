@@ -3,6 +3,10 @@
     --header-text: #f8f8f8;
 }
 
+body {
+    margin: 0;
+}
+
 header {
     background-color: var(--header-bg);
     color: var(--header-text)
