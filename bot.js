@@ -22,6 +22,8 @@ function answer(question) {
 
         intern: "I interned at VMware, Inc.",
 
+        gf: "I call her Sal",
+        girlfriend: "I call her Sal",
 
 
     };
