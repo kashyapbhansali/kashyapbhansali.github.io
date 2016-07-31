@@ -3,7 +3,8 @@
     --header-text: #f8f8f8;
 }
 
-header {
+/*  Header */
+.header {
     background-color: var(--header-bg);
     color: var(--header-text)
 }
@@ -43,6 +44,33 @@ header {
     animation: blink 2.5s infinite;
 }
 
+/* Header Ends */
+
+/* Content */
+.content {
+    font-family: courier;
+    margin-top: 10px;
+    text-align: center;
+    animation: fadein 5s;
+}
+
+.botname {
+    font-size: 20px;
+}
+
+#askMe {
+    padding: 10px;
+    margin-left: 2px;
+}
+
+#ouput {
+    overflow: hidden;
+    animation: type 10s;
+}
+/* Content Ends */
+
+/* Animation Keyframes */
+
 @keyframes blink {
     0% { opacity: 1.0;
         font-size: 14px;
@@ -59,3 +87,9 @@ header {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+@keyframes type {
+    from { width: 0%}
+    to { width: 100%}
+}
+/* Animation Keyframes Ends */

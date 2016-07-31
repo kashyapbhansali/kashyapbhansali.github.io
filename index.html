@@ -11,8 +11,21 @@
 </head>
 <body>
 
+<script>
+
+    function go() {
+        var output = "";
+        output = answer(document.getElementById("askMe").value);
+        if (output) {
+            document.getElementById("output").innerHTML = '"' + output +'"';
+        }
+    }
+
+    //onsubmit="answer(document.getElementById('askMe').value)"
+</script>
+
 <header>
-    <div class="row">
+    <div class="row header">
         <div class="col-md-offset-1 col-md-6 col-xs-12">
             <div class="name">
                 <h1>Kashyap Bhansali</h1>
@@ -31,19 +44,28 @@
     </div>
 </header>
 
+    <div class="row content">
+        <div class="col-md-offset-2 col-md-8">
+            <form id="question">
+                <div class="form-group">
+                    <!--<label for="askMe">Hey there! I am TechBum. Kashyap's personal bot! He is training me to answer any question that you have for him while he is away</label>-->
+                    <p>
+                        Hey there! I am <span class="botname">TechBum</span>.
+                        <br>
+                        Kashyap's personal Bot.
 
+                        I am being trained to get smarter... Go easy on me :)
+                    </p>
+                    <input type="text" class="form-control" onkeyup="go()" id="askMe" placeholder="Ask anything about me!" autocomplete="off" required>
+                </div>
+            </form>
 
-<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyC3mCKG3s2ob4f1uPSmWFKlZ4WtcKzuw-w",
-        authDomain: "techbum-1524c.firebaseapp.com",
-        databaseURL: "https://techbum-1524c.firebaseio.com",
-        storageBucket: "techbum-1524c.appspot.com",
-    };
-    firebase.initializeApp(config);
-</script>
+            <blockquote>
+                <p id="output"><br></p>
+            </blockquote>
+        </div>
+    </div>
+
 <!-- Google Analytics -->
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -56,10 +78,8 @@
 
 </script>
 <!-- End Google Analytics -->
-
+<script src="bot.js"></script>
 
 </body>
-
-
 
 </html>
