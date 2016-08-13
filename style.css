@@ -1,12 +1,14 @@
 :root {
-    --header-bg: #383838;
-    --header-text: #f8f8f8;
+    --header-dark-bg: #383838;
+    --header-dark-text: #f8f8f8;
+    --header-light-bg: #ffffff;
+    --header-light-text: #000000;
 }
 
 /*  Header */
 .header {
-    background-color: var(--header-bg);
-    color: var(--header-text)
+    background-color: var(--header-light-bg);
+    color: var(--header-light-text)
 }
 
 .name {
