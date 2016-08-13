@@ -7,8 +7,8 @@
 
 /*  Header */
 .header {
-    background-color: var(--header-light-bg);
-    color: var(--header-light-text)
+    background-color: var(--header-dark-bg);
+    color: var(--header-dark-text)
 }
 
 .name {
