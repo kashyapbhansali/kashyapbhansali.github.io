@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Visualization 1 - Social</title>
+    <script src="jquery-1.12.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="bootstrap-3.3.6-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap-3.3.6-dist/css/bootstrap.css">
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8"> 
+	<script type="text/javascript" src="./Chart.js"></script>
+    <script type="text/javascript" src="./query.js"></script>
+    
+    <style type="text/css">
+    .pie-legend li span {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin-right: 5px;
+    }
+    .pie-legend {
+        list-style: none;    
+    }
+    .doughnut-legend li span {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    margin-right: 5px;
+    }
+    .doughnut-legend {
+        list-style: none;    
+    }
+    body {
+        padding-top: 70px;
+    }
+
+    </style>
+</head>
+<body onload="call_pies();">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-left">
+      <div class="container">
+        <ul class="nav navbar-nav">
+        <li ><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="viz1.html">Visualization 1</a></li>
+        <li><a href="viz2.html">Visualization 2</a></li>
+        <li><a href="viz3.html">Visualization 3</a></li>
+      </ul>
+      </div>
+    </nav>
+    <div class="row">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10">
+            <h1>Comparing interaction of Two Users - Social Visualization</h1>
+            <br>
+            <b>User 1:</b> <select id="select1">
+                <option>A0005</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp; <b>User 2:</b> <select id="select2">
+                <option>A0022</option>
+            </select>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="btn btn-primary" onClick="call_pies();">Get Charts</button>
+        <br><br><br>
+        </div>
+
+        <div class="col-md-1"></div>
+        
+    </div>
+    
+    <div class="row">
+        
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <br><br><br>
+            <h3> User 1</h3>
+        </div>
+        <div class="col-md-4">
+            <h2>Search Queries</h2><br>
+            <canvas  style="float:left;" id="pieChart" width="200" height="200"></canvas> 
+            <div style="float:left;" id="legend"></div>
+            
+        </div>
+        <div class="col-md-4">
+            <h2>Intention of Search</h2><br>
+            <canvas style="float:left;" id="pieChart_intention" width="200" height="200"></canvas>
+            <div style="float:left;" id="legend1"></div>
+        </div>
+        
+
+        <div class="col-md-1"></div>
+
+    </div>
+    <br><br>
+    
+    <div class="row">
+        
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <h3> User 2</h3>
+        </div>
+        <div class="col-md-4">
+            
+            <canvas  style="float:left;" id="pieChart2" width="200" height="200"></canvas> 
+            <div style="float:left;" id="legend2"></div>
+            
+        </div>
+        <div class="col-md-4">
+            
+            <canvas style="float:left;" id="pieChart_intention2" width="200" height="200"></canvas>
+            <div style="float:left;" id="legend3"></div>
+        </div>
+        
+
+        <div class="col-md-1"></div>
+
+    </div>
+    <br><br>
+    <div class="row">
+    
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10">
+            <h4>Following Things can be interpreted from the above Visualization:</h4>
+            <ol>
+                <li>The above visualization gives us the ability to compare 2 users based on their topic of search query and the intention of their search.</li>
+                <li>The pie chart on the left indicate the topics of search query like Strings, Sorting, Arrays, Class and Loops.</li>
+                <li>The doughnut chart on the right side, shows the intention: Knowledge seeking, Problem solving, Method learning or some other reason.</li>
+                <li><b>Pattern Findings:</b></li>
+                <ol>
+                    <li>Consider comapring user A0005 and user A0022, we see that both searched for String, Sorting and Arrays. We see that they have kind of same amount of query for each type. And their intention of search is mostly for Knowledge Seeking and method Learning.</li>
+                    <li>So, if the students are from the same class, may be in some cases each of these users and take help from one another. As their process of learning Java matches in some way.</li>
+                    <li>Knowledge seeking &amp; Method Learning have been denoted by shades of green and Problem solving and others have been denoted by shades of red, making it easier to interpret whether the student/user is facing difficulty or is doing good at a topic.</li>
+
+                </ol>
+            </ol>
+        </div>
+
+        <div class="col-md-1"></div>    
+
+    </div>
+        
+<!-- <canvas id="myChart" width="800" height="800"></canvas> -->
+<script>
+
+function call_pies()
+{
+    xy('select1');
+    xy1('select2')
+}
+
+
+var pie_context = document.getElementById('pieChart').getContext('2d');
+var pie_context_intention = document.getElementById('pieChart_intention').getContext('2d');
+var pie_context2 = document.getElementById('pieChart2').getContext('2d');
+var pie_context_intention2 = document.getElementById('pieChart_intention2').getContext('2d');
+var ulist= [];
+var last_uid = query_data[0].u_id;
+for(var i= 0;i<query_data.length-1;i++)
+{
+    last_uid = query_data[i].u_id;
+    if(last_uid != query_data[i+1].u_id)
+    {
+        ulist.push(query_data[i+1].u_id);
+    }
+}
+
+ulist.sort();
+//var select = document.getElementById("selectNumber");
+var myselect = document.getElementById('select1');
+var options =  ulist; //["A0019", "A0040", "A0042"];
+for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    myselect.appendChild(el);
+}
+
+var myselect = document.getElementById('select2');
+var options =  ulist; //["A0019", "A0040", "A0042"];
+for(var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    myselect.appendChild(el);
+}
+
+
+
+function xy(username)
+{
+var user1= document.getElementById(username).value;
+var ks1 = Number(0);
+var ps1 = Number(0);
+var na1 = Number(0);
+var ml1 = Number(0);
+
+//String 0,Sorting 1,Array 2,Class 3,Loops 4
+var topics = [];
+for(var j=0;j < 5;j++)
+{
+    topics[j] = Number(0);
+}
+
+for(var i=0;i< query_data.length;i++)
+{
+    var q = query_data[i].query.toLowerCase();
+    var q_int = query_data[i].intention;
+    if(query_data[i].u_id == user1)
+    {
+        if(q.indexOf("string") > -1)
+        {
+            topics[0] += Number(1);
+        }
+        if(q.indexOf("sort") > -1)
+        {
+            topics[1] += Number(1);
+        }
+        if(q.indexOf("array") > -1)
+        {
+            topics[2] += Number(1);
+        }
+        if(q.indexOf("class") > -1)
+        {
+            topics[3] += Number(1);
+        }
+        if(q.indexOf("loop") > -1)
+        {
+            topics[4] += Number(1);
+        }
+        if(q_int == "KS")
+        {
+            ks1 += Number(1);
+        }
+        if (q_int == "ML" ) 
+        {
+            ml1 += Number(1);
+        }
+        if(q_int == "PS")
+        {
+            ps1 += Number(1);
+        }
+        if(q_int == "NA")
+        {
+            na1 += Number(1);
+        }
+
+    }
+}
+
+//document.write(topics);
+
+var pie_data = [
+    {
+        value: topics[0],
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "String"
+    },
+    {
+        value: topics[1],
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Sorting"
+    },
+    {
+        value: topics[2],
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Arrays"
+    },
+    {
+        value: topics[3],
+        color: "#949FB1",
+        highlight: "#A8B3C5",
+        label: "Class"
+    },
+    {
+        value: topics[4],
+        color: "#4D5360",
+        highlight: "#616774",
+        label: "Loops"
+    }
+];
+
+var pie_data_intention = [
+    {
+        value: ks1,
+        color: "#01DF3A", //"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Knowldege Seeking"
+    },
+    {
+        value: ml1,
+        color: "#58FA82", //"#949FB1",
+        highlight: "#A8B3C5",
+        label: "Method Learning"
+    },
+    {
+        value: ps1,
+        color: "#FE2E2E", //#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Problem Solving"
+    },
+    {
+        value: na1,
+        color: "#FA5858", //"#FDB45C",
+        highlight: "#FFC870",
+        label: "Other"
+    }
+    
+    
+];
+
+
+
+//User 1 pie chart
+pie_context.clearRect(0,0,200,200);
+pie_context = document.getElementById('pieChart').getContext('2d');
+window.myPie = new Chart(pie_context).Pie(pie_data,{
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+    });
+pie_context.clearRect(0,0,200,200);
+var canv1 = document.getElementById('pieChart');
+canv1.height=200;
+canv1.width=200;
+pie_context.clearRect(0,0,200,200);
+myPie.destroy();
+myPie.update();
+
+var legend = myPie.generateLegend();
+$("#legend").html(legend);
+
+//user 1 knowldege chart
+pie_context_intention.clearRect(0,0,200,200);
+pie_context_intention = document.getElementById('pieChart_intention').getContext('2d');
+window.myPie_intention = new Chart(pie_context_intention).Doughnut(pie_data_intention,{
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+    });
+
+
+pie_context_intention.clearRect(0,0,200,200);
+var canv2 = document.getElementById('pieChart_intention');
+canv2.height=200;
+canv2.width=200;
+pie_context_intention.clearRect(0,0,200,200);
+myPie_intention.destroy();
+//myPie.update();
+myPie_intention.update();
+
+
+var legend_int = myPie_intention.generateLegend();
+$("#legend1").html(legend_int);
+
+//end of user 1 stuff ! 
+}
+
+
+function xy1(username)
+{
+var user1= document.getElementById(username).value;
+var ks1 = Number(0);
+var ps1 = Number(0);
+var na1 = Number(0);
+var ml1 = Number(0);
+
+//String 0,Sorting 1,Array 2,Class 3,Loops 4
+var topics = [];
+for(var j=0;j < 5;j++)
+{
+    topics[j] = Number(0);
+}
+
+for(var i=0;i< query_data.length;i++)
+{
+    var q = query_data[i].query.toLowerCase();
+    var q_int = query_data[i].intention;
+    if(query_data[i].u_id == user1)
+    {
+        if(q.indexOf("string") > -1)
+        {
+            topics[0] += Number(1);
+        }
+        if(q.indexOf("sort") > -1)
+        {
+            topics[1] += Number(1);
+        }
+        if(q.indexOf("array") > -1)
+        {
+            topics[2] += Number(1);
+        }
+        if(q.indexOf("class") > -1)
+        {
+            topics[3] += Number(1);
+        }
+        if(q.indexOf("loop") > -1)
+        {
+            topics[4] += Number(1);
+        }
+        if(q_int == "KS")
+        {
+            ks1 += Number(1);
+        }
+        if (q_int == "ML" ) 
+        {
+            ml1 += Number(1);
+        }
+        if(q_int == "PS")
+        {
+            ps1 += Number(1);
+        }
+        if(q_int == "NA")
+        {
+            na1 += Number(1);
+        }
+
+    }
+}
+
+//document.write(topics);
+
+var pie_data2 = [
+    {
+        value: topics[0],
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "String"
+    },
+    {
+        value: topics[1],
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Sorting"
+    },
+    {
+        value: topics[2],
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Arrays"
+    },
+    {
+        value: topics[3],
+        color: "#949FB1",
+        highlight: "#A8B3C5",
+        label: "Class"
+    },
+    {
+        value: topics[4],
+        color: "#4D5360",
+        highlight: "#616774",
+        label: "Loops"
+    }
+];
+
+var pie_data_intention2 = [
+    {
+        value: ks1,
+        color: "#01DF3A", //"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Knowldege Seeking"
+    },
+    {
+        value: ml1,
+        color: "#58FA82", //"#949FB1",
+        highlight: "#A8B3C5",
+        label: "Method Learning"
+    },
+    {
+        value: ps1,
+        color: "#FE2E2E", //"#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Problem Solving"
+    },
+    {
+        value: na1,
+        color: "#FA5858", //"#FDB45C",
+        highlight: "#FFC870",
+        label: "Other"
+    }
+    
+    
+];
+
+
+
+//User 1 pie chart
+pie_context2.clearRect(0,0,200,200);
+pie_context2 = document.getElementById('pieChart2').getContext('2d');
+window.myPie2 = new Chart(pie_context2).Pie(pie_data2,{
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+    });
+pie_context2.clearRect(0,0,200,200);
+var canv1 = document.getElementById('pieChart2');
+canv1.height=200;
+canv1.width=200;
+pie_context2.clearRect(0,0,200,200);
+myPie2.destroy();
+myPie2.update();
+
+var legend = myPie2.generateLegend();
+$("#legend2").html(legend);
+
+//user 1 knowldege chart
+pie_context_intention2.clearRect(0,0,200,200);
+pie_context_intention2 = document.getElementById('pieChart_intention2').getContext('2d');
+window.myPie_intention2 = new Chart(pie_context_intention2).Doughnut(pie_data_intention2,{
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+    });
+
+
+pie_context_intention2.clearRect(0,0,200,200);
+var canv2 = document.getElementById('pieChart_intention2');
+canv2.height=200;
+canv2.width=200;
+pie_context_intention2.clearRect(0,0,200,200);
+myPie_intention2.destroy();
+//myPie.update();
+myPie_intention2.update();
+
+
+var legend_int = myPie_intention2.generateLegend();
+$("#legend3").html(legend_int);
+
+//end of user 1 stuff ! 
+}
+
+
+
+</script>
+</body>
+</html>

@@ -3,12 +3,14 @@
     --header-dark-text: #f8f8f8;
     --header-light-bg: #ffffff;
     --header-light-text: #000000;
+    --bootstrap-red: #d9534f;
+    --bootstrap-green: #5cb85c;
 }
 
 /*  Header */
 .header {
     background-color: var(--header-dark-bg);
-    color: var(--header-dark-text)
+    color: var(--header-dark-text);
 }
 
 .name {
@@ -19,17 +21,19 @@
 
 .name > h1 {
     font-family: gothic;
-    font-size: 60px;
+    font-size: 80px;
 }
 
 .name > span {
     font-family: courier;
+    font-size: 18px;
 }
 
 .intro {
     margin-top: 10%;
     text-align: center;
     animation: fadein 4s;
+    font-size: 18px;
 }
 
 .instagram {
@@ -69,19 +73,23 @@
     overflow: hidden;
     animation: type 10s;
 }
+
+.jumbotron {
+    background-color: var(--bootstrap-red);
+}
 /* Content Ends */
 
 /* Animation Keyframes */
 
 @keyframes blink {
     0% { opacity: 1.0;
-        font-size: 14px;
+        font-size: 16px;
         padding: 2px 1px 1px 1px;}
     50% { opacity: 1.0;
-        font-size: 22px;
-        padding: 0px 1px 1px 1px;}
+        font-size: 24px;
+        padding: 0px 1px 0px 1px;}
     100% { opacity: 1.0;
-        font-size: 14px;
+        font-size: 16px;
         padding: 2px 1px 1px 1px;}
 }
 

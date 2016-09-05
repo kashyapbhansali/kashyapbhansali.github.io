@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
 </head>
 <body>
 
@@ -31,9 +30,14 @@
                 <h1>Kashyap Bhansali</h1>
                 <span>I &nbsp; m a k e &nbsp; s t u f f &nbsp; w i t h &nbsp;</span>  <i class="fa fa-heart love"></i>
             </div>
-            <p class="intro">
+            <!-- <p class="intro">
                 Intern @ VMware, Inc.
-            </p>
+            </p> -->
+            <div class="personal_info container-fluid" style="background-color:#d9534f;
+                                                            margin-top: 20px;
+                                                            border-radius:10px;">
+                t <br> 
+            </div>
         </div>
         <div class="col-md-3 col-xs-12">
             <div class="instagram container-fluid">
@@ -43,29 +47,36 @@
         </div>
     </div>
 </header>
+<!-- Bot -->
+<div class="row content" style="display:none;">
+    <div class="col-md-offset-2 col-md-8">
+        <form id="question">
+            <div class="form-group">
+                <!--<label for="askMe">Hey there! I am TechBum. Kashyap's personal bot! He is training me to answer any question that you have for him while he is away</label>-->
+                <p>
+                    Hey there! I am <span class="botname">TechBum</span>.
+                    <br>
+                    Kashyap's personal Bot.
 
-    <div class="row content" style="display:none;">
-        <div class="col-md-offset-2 col-md-8">
-            <form id="question">
-                <div class="form-group">
-                    <!--<label for="askMe">Hey there! I am TechBum. Kashyap's personal bot! He is training me to answer any question that you have for him while he is away</label>-->
-                    <p>
-                        Hey there! I am <span class="botname">TechBum</span>.
-                        <br>
-                        Kashyap's personal Bot.
+                    I am being trained to get smarter... Go easy on me :)
+                </p>
+                <input type="text" class="form-control" onkeyup="go()" id="askMe" placeholder="Ask anything about me!" autocomplete="off" required>
+            </div>
+        </form>
 
-                        I am being trained to get smarter... Go easy on me :)
-                    </p>
-                    <input type="text" class="form-control" onkeyup="go()" id="askMe" placeholder="Ask anything about me!" autocomplete="off" required>
-                </div>
-            </form>
-
-            <blockquote>
-                <p id="output"><br></p>
-            </blockquote>
-        </div>
+        <blockquote>
+            <p id="output"><br></p>
+        </blockquote>
     </div>
+</div>
 
+<!-- Skills -->
+<div class="jumbotron" style="background-color:#d9534f">
+
+</div>
+<div class="jumbotron" style="background-color:#5cb85c">
+
+</div>
 <!-- Google Analytics -->
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -79,6 +90,10 @@
 </script>
 <!-- End Google Analytics -->
 <script src="bot.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </body>
 
