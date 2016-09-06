@@ -1,7 +1,7 @@
 :root {
     --header-dark-bg: #383838;
     --header-dark-text: #f8f8f8;
-    --header-light-bg: #ffffff;
+    --header-light-bg: #f9f9f9;
     --header-light-text: #000000;
     --bootstrap-red: #d9534f;
     --bootstrap-green: #5cb85c;
@@ -9,8 +9,8 @@
 
 /*  Header */
 .header {
-    background-color: var(--header-dark-bg);
-    color: var(--header-dark-text);
+    background-color: var(--header-light-bg);
+    color: var(--header-light-text);
 }
 
 .name {
@@ -37,9 +37,7 @@
 }
 
 .instagram {
-    padding-top: 10%;
     width: 100%;
-    padding-bottom: 10%;
     animation: fadein 2s;
 }
 
