@@ -21,12 +21,12 @@
 
 .name > h1 {
     font-family: gothic;
-    font-size: 80px;
+    font-size: 4.5vmax;
 }
 
 .name > span {
     font-family: courier;
-    font-size: 18px;
+    font-size: 1.7vh;
     word-spacing: 1px;
     letter-spacing: 10px;
 }
@@ -35,15 +35,18 @@
     text-align: center;
     vertical-align: center;
     padding: 2%;
-    font-size: 20px;
+    font-size: 2vh;
     font-family: courier;    
     background-color: var(--header-dark-bg);
     color: var(--header-dark-text);
+    animation: fadein 2s;
 }
 
-.instagram {
-    width: 100%;
-    animation: fadein 2s;
+.exp {
+    text-align: center;
+    padding: 2%;
+    font-size: 300%;
+    font-family: gothic;
 }
 
 .love {
