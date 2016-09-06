@@ -14,7 +14,7 @@
 }
 
 .name {
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: center;
     animation: fadein 1s;
 }
@@ -45,7 +45,7 @@
     color: red;
     position: absolute;
     padding: 1px 1px 1px 1px;
-    animation: blink 2.5s infinite;
+    //animation: blink 2.5s infinite;
 }
 
 /* Header Ends */
