@@ -27,13 +27,16 @@
 .name > span {
     font-family: courier;
     font-size: 18px;
+    word-spacing: 1px;
+    letter-spacing: 10px;
 }
 
 .intro {
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: center;
     animation: fadein 4s;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: gothic;
 }
 
 .instagram {
@@ -42,10 +45,11 @@
 }
 
 .love {
+    font-size: 24px;
     color: red;
     position: absolute;
     padding: 1px 1px 1px 1px;
-    //animation: blink 2.5s infinite;
+    animation: blink 2.5s infinite;
 }
 
 /* Header Ends */
