@@ -14,7 +14,7 @@
 }
 
 .name {
-    margin-top: 5%;
+    margin: 5%;
     text-align: center;
     animation: fadein 1s;
 }
@@ -32,11 +32,13 @@
 }
 
 .intro {
-    margin-top: 5%;
     text-align: center;
-    animation: fadein 4s;
+    vertical-align: center;
+    padding: 2%;
     font-size: 20px;
-    font-family: gothic;
+    font-family: courier;    
+    background-color: var(--header-dark-bg);
+    color: var(--header-dark-text);
 }
 
 .instagram {
