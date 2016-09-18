@@ -5,12 +5,29 @@
     --header-light-text: #000000;
     --bootstrap-red: #d9534f;
     --bootstrap-green: #5cb85c;
+    /*background: #B24592; !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to left, #B24592 , #F15F79); !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to left, #B24592 , #F15F79); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
+
+
+    /*background: #43cea2; !* fallback for old browsers *!*/
+    /*background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*background: linear-gradient(to left, #43cea2 , #185a9d); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+
 }
 
+body {
+
+}
 /*  Header */
 .header {
     background-color: var(--header-light-bg);
     color: var(--header-light-text);
+    background: #43cea2; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .name {
@@ -20,13 +37,13 @@
 }
 
 .name > h1 {
-    font-family: gothic;
-    font-size: 4.5vmax;
+    font-family: 'Damion', cursive;
+    font-size: 70px;
 }
 
 .name > span {
-    font-family: courier;
-    font-size: 1.7vh;
+    font-family: "Century Gothic";
+    font-size: 16px;
     word-spacing: 1px;
     letter-spacing: 10px;
 }
@@ -36,40 +53,37 @@
     vertical-align: center;
     padding: 2%;
     font-size: 2vh;
-    font-family: courier;    
+    font-family: "Century Gothic";
     background-color: var(--header-dark-bg);
     color: var(--header-dark-text);
     animation: fadein 2s;
 }
 
-.exp {
-    
-    padding: 2%;
+
+.space > .workex > h2 {
+    text-align: center;
+    //font-weight: bold;
+    font-family: "Century Gothic";
 }
 
-.space > .heading {
-    text-align: justify;
-    font-size: 2.8vmax;
-    font-family: gothic;
+.media {
+    font-family: "Century Gothic";
+    padding-bottom: 10px;
 }
-
-.space > .info {
-    font-size: 2vmax;
+.media-heading {
+    font-weight: 500;
 }
 
 .space > .info > .info-head{
     text-align: justify;
-    font-size: 2.2vmax;
+    font-size: 30px;
 }
 
 .space > .info > .info-body,ul{
     text-align: justify;
-    font-size: 1.3vmax;
+    font-size: 20px;
 }
 
-.space > hr {
-    width: 20vmax;
-}
 
 .love {
     font-size: 1vmax;
