@@ -17,9 +17,28 @@
 
 }
 
-body {
 
+/* mobile mdedai queries */
+
+@media only screen and (max-device-width: 480px) {
+    .name > h1 {
+        font-size: 37px;
+    }
+    .name > span {
+        font-size: 12px;
+    }
 }
+
+@media only screen and (min-device-width: 500px) {
+    .name > h1 {
+        font-size: 80px;
+    }
+    .name > span {
+        font-size: 16px;
+    }
+}
+
+
 /*  Header */
 .header {
     background-color: var(--header-light-bg);
@@ -38,12 +57,11 @@ body {
 
 .name > h1 {
     font-family: 'Damion', cursive;
-    font-size: 70px;
 }
 
 .name > span {
     font-family: "Century Gothic";
-    font-size: 16px;
+
     word-spacing: 1px;
     letter-spacing: 10px;
 }
@@ -62,26 +80,16 @@ body {
 
 .space > .workex > h2 {
     text-align: center;
-    //font-weight: bold;
     font-family: "Century Gothic";
 }
 
 .media {
-    font-family: "Century Gothic";
+    //font-family: "Century Gothic";
     padding-bottom: 10px;
 }
 .media-heading {
+    font-family: "Century Gothic";
     font-weight: 500;
-}
-
-.space > .info > .info-head{
-    text-align: justify;
-    font-size: 30px;
-}
-
-.space > .info > .info-body,ul{
-    text-align: justify;
-    font-size: 20px;
 }
 
 
