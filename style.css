@@ -20,7 +20,7 @@
 
 /* mobile mdedai queries */
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 500px) {
     .name > h1 {
         font-size: 37px;
     }
