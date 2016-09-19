@@ -27,6 +27,9 @@
     .name > span {
         font-size: 12px;
     }
+    .intro {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (min-device-width: 500px) {
@@ -35,6 +38,9 @@
     }
     .name > span {
         font-size: 16px;
+    }
+    .intro {
+        font-size: 20px;
     }
 }
 
@@ -70,7 +76,6 @@
     text-align: center;
     vertical-align: center;
     padding: 2%;
-    font-size: 2vh;
     font-family: "Century Gothic";
     background-color: var(--header-dark-bg);
     color: var(--header-dark-text);
