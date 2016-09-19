@@ -61,6 +61,10 @@
 
 }
 
+.dp {
+    max-width: 200px;
+}
+
 .name {
     margin: 5%;
     text-align: center;
