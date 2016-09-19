@@ -30,6 +30,9 @@
     .intro {
         font-size: 12px;
     }
+    .dp {
+        width: 100px;
+    }
 }
 
 @media only screen and (min-device-width: 700px) {
@@ -41,6 +44,9 @@
     }
     .intro {
         font-size: 20px;
+    }
+    .dp {
+        width: 200px;
     }
 }
 
