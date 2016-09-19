@@ -32,7 +32,7 @@
     }
 }
 
-@media only screen and (min-device-width: 500px) {
+@media only screen and (min-device-width: 700px) {
     .name > h1 {
         font-size: 80px;
     }
@@ -82,7 +82,9 @@
     animation: fadein 2s;
 }
 
-
+.space {
+    animation: fadein 2s;
+}
 .space > .workex > h2 {
     text-align: center;
     font-family: "Century Gothic";
@@ -96,7 +98,6 @@
     font-family: "Century Gothic";
     font-weight: 500;
 }
-
 
 .love {
     font-size: 1vmax;
@@ -130,9 +131,7 @@
     animation: type 10s;
 }
 
-.jumbotron {
-    background-color: var(--bootstrap-red);
-}
+
 /* Content Ends */
 
 /* Animation Keyframes */
@@ -149,13 +148,5 @@
         padding: 2px 1px 1px 1px;}
 }
 
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
 
-@keyframes type {
-    from { width: 0%}
-    to { width: 100%}
-}
 /* Animation Keyframes Ends */
