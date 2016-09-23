@@ -17,12 +17,11 @@
 
 }
 
-
 /* mobile mdedai queries */
 
 @media only screen and (max-device-width: 500px) {
     .name > h1 {
-        font-size: 37px;
+        font-size: 3em;
     }
     .name > span {
         font-size: 12px;
@@ -33,6 +32,15 @@
     .dp {
         width: 100px;
     }
+
+    .space > .workex > h2 {
+        font-size: 1.9em;
+    }
+
+    .media-object {
+        width:70px;
+    }
+
 }
 
 @media only screen and (min-device-width: 700px) {
@@ -47,6 +55,10 @@
     }
     .dp {
         width: 200px;
+    }
+
+    .media-object {
+        width:100px;
     }
 }
 
@@ -93,6 +105,7 @@
 }
 
 .space {
+    background-color: #fcfcfc;
     animation: fadein 2s;
 }
 .space > .workex > h2 {
@@ -102,7 +115,7 @@
 
 .media {
     //font-family: "Century Gothic";
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 .media-heading {
     font-family: "Century Gothic";
