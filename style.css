@@ -5,15 +5,7 @@
     --header-light-text: #000000;
     --bootstrap-red: #d9534f;
     --bootstrap-green: #5cb85c;
-    /*background: #B24592; !* fallback for old browsers *!*/
-    /*background: -webkit-linear-gradient(to left, #B24592 , #F15F79); !* Chrome 10-25, Safari 5.1-6 *!*/
-    /*background: linear-gradient(to left, #B24592 , #F15F79); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 
-
-
-    /*background: #43cea2; !* fallback for old browsers *!*/
-    /*background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); !* Chrome 10-25, Safari 5.1-6 *!*/
-    /*background: linear-gradient(to left, #43cea2 , #185a9d); !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
 
 }
 
@@ -65,11 +57,10 @@
 
 /*  Header */
 .header {
-    background-color: var(--header-light-bg);
-    color: var(--header-light-text);
-    background: #43cea2; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #43cea2 , #185a9d); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #43cea2 , #185a9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: black;
+    background: #43cea2;
+    background: -webkit-linear-gradient(to left, #43cea2 , #185a9d);
+    background: linear-gradient(to left, #43cea2 , #185a9d);
 
 }
 
@@ -89,7 +80,6 @@
 
 .name > span {
     font-family: "Century Gothic";
-
     word-spacing: 1px;
     letter-spacing: 10px;
 }
@@ -97,9 +87,9 @@
 .intro {
     text-align: center;
     vertical-align: center;
-    padding: 2%;
+    padding: 1%;
     font-family: "Century Gothic";
-    background-color: var(--header-dark-bg);
+    background-color: #383838;
     color: var(--header-dark-text);
     animation: fadein 2s;
 }
@@ -107,6 +97,10 @@
 .space {
     background-color: #fcfcfc;
     animation: fadein 2s;
+    /*-moz-box-shadow:    inset 0 0 5px #000000;*/
+    /*-webkit-box-shadow: inset 0 0 5px #000000;*/
+    /*box-shadow:         inset 0 0 7px #000000;*/
+
 }
 .space > .workex > h2 {
     text-align: center;
@@ -114,7 +108,6 @@
 }
 
 .media {
-    //font-family: "Century Gothic";
     padding-bottom: 20px;
 }
 .media-heading {
