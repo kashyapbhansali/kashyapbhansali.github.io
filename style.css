@@ -6,10 +6,17 @@
     --bootstrap-red: #d9534f;
     --bootstrap-green: #5cb85c;
     /*background-image: url("back.png");*/
-
 }
 
-/* mobile mdedai queries */
+a:link {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+/* mobile medai queries */
 
 @media only screen and (max-device-width: 500px) {
     .name > h1 {
@@ -33,6 +40,10 @@
         width:70px;
     }
 
+    .social > .btn {
+        font-size: 8px;
+    }
+
 }
 
 @media only screen and (min-device-width: 700px) {
@@ -51,6 +62,10 @@
 
     .media-object {
         width:100px;
+    }
+
+    .social > .btn{
+        font-size: 20px;
     }
 }
 
@@ -89,7 +104,7 @@
     vertical-align: center;
     padding: 1%;
     font-family: "Century Gothic";
-    background-color: #383838;
+    background-color: #282828;
     color: var(--header-dark-text);
     animation: fadein 2s;
 }
@@ -121,6 +136,11 @@
     position: absolute;
     padding: 1px 1px 1px 1px;
     animation: blink 2.5s infinite;
+}
+
+.social > .btn {
+    background-color: rgba(100,100,100,0.5);
+    font-size: 20px;
 }
 
 /* Header Ends */

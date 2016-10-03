@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     
 </head>
-<body class="col-md-offset-2 col-md-8">
+<body class="">
 
-<script>
-    function go() {
-        var output = "";
-        output = answer(document.getElementById("askMe").value);
-        if (output) {
-            document.getElementById("output").innerHTML = '"' + output +'"';
-        }
-    }
-</script>
+<div class="col-md-offset-2 col-md-8">
+<!--<script>-->
+    <!--function go() {-->
+        <!--var output = "";-->
+        <!--output = answer(document.getElementById("askMe").value);-->
+        <!--if (output) {-->
+            <!--document.getElementById("output").innerHTML = '"' + output +'"';-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
 
 <header>
     <div class="row header">
@@ -28,6 +29,23 @@
                 <img src="profile1-min.jpg" alt="Profile Picture" class="img-rounded dp">
                 <h1>Kashyap Bhansali</h1>
                 <span>I make stuff with</span> &nbsp; <i class="fa fa-heart love"></i>
+                <br>
+                <br>
+                <div class="btn-group social" role="group" aria-label="...">
+                    <a href="resume.pdf" target="_blank" type="button" class="btn trans"
+                            data-toggle="tooltip" data-placement="left" title="Resume">
+                        <i class="fa fa-file-text"></i></a>
+                    <a href="https://www.linkedin.com/in/kashyapbhansali" target="_blank" type="button" class="btn"
+                            data-toggle="tooltip" data-placement="bottom" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/kashyapbhansali" target="_blank" type="button" class="btn"
+                            data-toggle="tooltip" data-placement="bottom" title="Github"><i class="fa fa-github-alt"></i></a>
+                    <a href="https://www.facebook.com/bhansali.kashyap" target="_blank" type="button" class="btn"
+                            data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/kashyapbhansali/" target="_blank" type="button" class="btn"
+                            data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
+                    <button type="button" class="btn"
+                            data-toggle="tooltip" data-placement="right" title="Snapchat"><i class="fa fa-snapchat-ghost"></i></button>
+                </div>
             </div>
         </div>
     </div>
@@ -142,6 +160,7 @@
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+</div>
 </body>
 
 </html>
