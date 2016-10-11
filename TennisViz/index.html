@@ -1,0 +1,56 @@
+<html>
+    <head>
+    	<link rel="stylesheet" href="radar-chart.css">
+    	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script type="text/javascript" src="radar-chart.js"></script>
+        <script type="text/javascript" src="test.js"></script>
+        <meta charset="utf-8"/>
+        <style>
+        div.tooltip {	
+		    position: absolute;			
+		    text-align: center;			
+		    width: auto;					
+		    height: auto;					
+		    padding: 5px;				
+		    font: 16px "century gothic";		
+		    background: #f0f0f0;	
+		    border: 0px;		
+		    border-radius: 8px;			
+		    pointer-events: none;
+		    z-index: 1000;			
+		}
+		.scatterdiv {
+			width: 1100;
+			height: 800;
+			position: absolute;
+			
+
+		}
+
+		#chart {
+			position: absolute;
+			margin-top: 100px;
+			margin-left: 1000px;
+		}
+
+		.radar-chart .area {
+	      fill-opacity: 0.7;
+	    }
+	    .radar-chart.focus .area {
+	      fill-opacity: 0.3;
+	    }
+	    .radar-chart.focus .area.focused {
+	      fill-opacity: 0.9;
+	    }
+	    
+        </style>
+    </head>
+
+    <body>	
+    	<div class="scatterdiv"></div>
+    	
+        <div id="chart" width="100px" height="100px" style="height:500px;"></div>
+    </body>
+
+</html>
