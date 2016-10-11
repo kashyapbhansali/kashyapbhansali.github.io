@@ -9,6 +9,10 @@ d3.selection.prototype.moveToFront = function() {
   });
 };
 
+function isHidden(el) {
+    var style = window.getComputedStyle(el);
+    return (style.display === 'none')
+}
 
 //define row information
 function row(d) {
@@ -263,23 +267,45 @@ d3.csv("new.csv", row, function(error, csv_data){
     
     legend.append("text")
     .data(colorScale.domain())
+    .attr("id", function(d){return "text_"+d.replace(" ","_");})
     .attr("transform", function(d,i) {
         return "translate(" +(i*(160+i)+25) +",16)";
     })
     .text(function(d) { 
         //console.log(d);
         return d;})
-    .on("mouseover", function(d) {
-            d3.selectAll("." +d.replace(' ','_'))
-                .moveToFront()
-                .style("opacity", 0.8);
-            d3.selectAll("circle:not(." +d.replace(' ','_') +")")
-                .style("opacity", 0.1);
+    .on("click", function(d) {
+        //console.log(d.replace(' ','_'));
+        var appBanners = document.getElementsByClassName(d.replace(' ','_'));
+
+
+        for (var i = 0; i < appBanners.length; i ++) {
+            //console.log("bba");
+            
+            if (!isHidden(appBanners[i])) {
+                appBanners[i].style.display = 'none';
+                d3.select(this).attr("fill","#555555");
+                //document.getElementById("text_" +d.replace(" ","_")).style.color = "red";
+            }
+
+            else {
+                appBanners[i].style.display = 'block';
+                d3.select(this).attr("fill","black");
+                document.getElementById("text_" +d.replace(" ","_")).style.color = "black";
+            }
+            
+        }
+
+    // d3.selectAll("." +d.replace(' ','_'))
+    //     .moveToFront()
+    //     .style("opacity", 0.8);
+    // d3.selectAll("circle:not(." +d.replace(' ','_') +")")
+    //     .style("opacity", 0.1);
         })
-        .on("mouseout", function(d) {
-            d3.selectAll("circle")
-                .style("opacity", default_opacity);  
-        })
+    // .on("mouseout", function(d) {
+    //     d3.selectAll("circle")
+    //         .style("opacity", default_opacity);  
+    // })
     .style("text-anchor", "start")
     .style("font-size","20px")
     .style("font-family","helvetica");
