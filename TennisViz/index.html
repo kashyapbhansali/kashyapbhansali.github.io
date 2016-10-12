@@ -29,7 +29,7 @@
 		}
 
 		#chart {
-			position: absolute;
+			//position: absolute;
 			margin-top: 100px;
 			margin-left: 1000px;
 		}
@@ -43,14 +43,48 @@
 	    .radar-chart.focus .area.focused {
 	      fill-opacity: 0.9;
 	    }
+
+	    .heading {
+	    	margin: 0 0 10 0;
+	    	text-align: center;
+	    	font-size: 2em;
+	    	color: white;
+	    	background: #383838;
+	    	padding: 10px;
+
+	    }
+
+	    .info {
+	    	background: #f8f8f8;
+	    	padding: 20px;
+	    	margin: 150 0 0 0;
+	    	text-align: center;
+	    	font-size: 1.5em;
+	    }
+
+	    .info > ol {
+	    }
 	    
         </style>
     </head>
 
     <body>	
+    	<div class="heading"> Aggressive Play increases Opponent Errors! </div>
     	<div class="scatterdiv"></div>
     	
         <div id="chart" width="100px" height="100px" style="height:500px;"></div>
+
+        <div class="info">
+        	The Scatter-Bubble Plot demonstrates a pattern of Increased Opponent Errors with an increase in player's Aggressive Play.
+        	<br><br>
+        	<b>--- Two Interesting observations ---</b>
+        	<ol>
+        		<li>Andy Roddick has consistent Fast Serve speed, hence increased aces in his games and he forced more errors on his opponents with increased aggressive play.</li>
+        		<li>Rafael Nadal has varying Fast Serve speeds but has one of the highest Aggressive margin and forced error rates than anyone else. </li>
+        	</ol>
+        	
+
+        </div>
     </body>
 
 </html>

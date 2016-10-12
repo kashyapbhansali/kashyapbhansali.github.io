@@ -292,39 +292,14 @@ d3.csv("new.csv", row, function(error, csv_data){
                 appBanners[i].style.display = 'block';
                 d3.select(this).attr("fill","black");
                 document.getElementById("text_" +d.replace(" ","_")).style.color = "black";
-            }
-            
+            }   
         }
+    })
 
-    // d3.selectAll("." +d.replace(' ','_'))
-    //     .moveToFront()
-    //     .style("opacity", 0.8);
-    // d3.selectAll("circle:not(." +d.replace(' ','_') +")")
-    //     .style("opacity", 0.1);
-        })
-    // .on("mouseout", function(d) {
-    //     d3.selectAll("circle")
-    //         .style("opacity", default_opacity);  
-    // })
     .style("text-anchor", "start")
     .style("font-size","20px")
     .style("font-family","helvetica");
 
-
-
-    //Plotting trend Line!
-    // var lineFunction = d3.svg.line()  
-    //                     .x(function(d) { return scale_x(d.aggdiff); })
-    //                     .y(function(d) { return scale_y(d.errordiff); })
-    //                     .interpolate("basis");
-                   
-
-    // //console.log(data);
-    // var svgContainer = data_svg.append("path")
-    //                     .attr("d", lineFunction(data))
-    //                     .attr("stroke", "red")
-    //                     .attr("stroke-width", 2)
-    //                     .attr("fill", "none");
 
  
 });

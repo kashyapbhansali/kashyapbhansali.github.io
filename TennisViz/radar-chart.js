@@ -11,7 +11,7 @@ var RadarChart = {
     maxValue: 0,
     minValue: 0,
     radians: 2 * Math.PI,
-    color: d3.scale.linear().domain([0,1]).range(["#00FF00", "#FF0000"]),//d3.scale.category20c(),
+    color: d3.scale.linear().domain([0,1]).range(["#5D67D4", "#DB4D5D"]),//d3.scale.category20c(),
     axisLine: true,
     axisText: true,
     circles: true,
