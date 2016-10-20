@@ -67,13 +67,11 @@ a:visited {
 
     .media {
         display: inline-block;
-        max-width: 49%;
+        width: 49%;
         padding: 10px; 
+        vertical-align: text-top;
     }
 
-    .media-left img {
-        width: 90px;
-    }
 }
 
 
@@ -138,9 +136,7 @@ a:visited {
     font-family: "Century Gothic";
 }
 
-.media-content {
-    text-align: justify;
-}
+
 
 .love {
     font-size: 1vmax;
