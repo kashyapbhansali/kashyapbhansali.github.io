@@ -147,8 +147,9 @@ a:visited {
 }
 
 .media li:last-child {
-    font-weight: 500;
-    font-style: italic;
+    font-weight: 600;
+    //font-style: italic;
+    font-family: courier
 }
 
 
