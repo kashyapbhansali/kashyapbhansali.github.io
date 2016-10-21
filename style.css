@@ -44,6 +44,10 @@ a:visited {
         text-align: justify; 
     }
 
+    .projects .media-heading {
+        text-align: center;
+    }
+
 }
 
 @media only screen and (min-device-width: 700px) {
