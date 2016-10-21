@@ -146,6 +146,15 @@ a:visited {
     font-family: "Century Gothic";
 }
 
+.media li:last-child {
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+.projects .media-heading {
+    font-weight: bold;
+}
 
 
 .love {
