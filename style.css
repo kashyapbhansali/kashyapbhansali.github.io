@@ -147,6 +147,7 @@ a:visited {
 }
 
 .media-heading {
+    font-weight: bold;
     font-family: "Century Gothic";
 }
 
