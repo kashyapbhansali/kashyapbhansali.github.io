@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    
+    <link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body class="">
 
@@ -23,7 +25,7 @@
 <!--</script>-->
 
 <script>
-
+    
     var projects = [
         {
             "name" : "Project 1",
@@ -35,8 +37,17 @@
         }
     ];
 
+    var text = `<div class="media">
+                <div class="media-body"
+                    <h4 class="media-heading">` +projects[0]['name'] +`</h4>
+                    <span class="media-content">
+                        ` +projects[0]['description']  +`
+                    </span>
+                </div>
+            </div>`;
 
-</script>
+
+</script> 
 
 <header>
     <div class="row header">
@@ -143,18 +154,59 @@
     <!-- Projects -->
     <div class="row space">
         <hr width="80%" height="10px;">
-        <div class="col-md-offset-1 col-md-10 workex">
+        <div class="col-md-offset-0 col-md-12 projects">
             <h2>Projects</h2>
             <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <!--<img class="media-object" src="back.png" alt="...">-->
-                    </a>
-                </div>
                 <div class="media-body">
-                    <h4 class="media-heading">Coming Soon...</h4>
+                    <h4 class="media-heading">Intelligent Visual Analytics - WebMD</h4>
                     <span class="media-content">
+                        Conducting Data-Analysis and developing customized interaction with coordinated views using D3.js and CrossFilter
+                        library for exploring our WebMD (Medical Forum Q&amp;A) Dataset. The process involved extracting Diseases, Symptoms, Medicines and mapping their relation to develop intelligent visualizations fom the Q&amp;As
+                        <br>
+                        <b>JavaScript, SVG, D3.js, CrossFilter, DC.js</b>
+                        
 
+                    </span>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">Extending Apache Spark for Geo-Spatial operations</h4>
+                    <span class="media-content">
+                        Extending Apache spark to perform Geo-Spatial operations based on GeoSpark, an extension with a set of Spatial
+                        Resilient Distributed Datasets that efficiently load, process & analyze large-scale spatial data across machines.
+                        Implementing the functionalities like spatial join, spatial aggregation and spatial co-location to develop better
+                        performing spatial analysis programs. 
+                        <br> 
+                        <b>Apache Spark, Hadoop, Scala</b>
+                    </span>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">Twitter Biodata (Winning Hackathon Project)</h4>
+                    <span class="media-content">
+                         Developed a dashboard that provides a Bird’s eye view of a Twitter Profile with a good focus on UI/UX &amp; ML.
+                         Implemented machine learning techniques to visualize the Social Network Graph to gain insight about the interests
+                        and sentiment of a user based on their Followers and Following profiles. 
+
+                        <br>
+                        <b>Python, JavaScript, Twitter API, D3.js</b>
+
+
+                    </span>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-body">
+                    <h4 class="media-heading">Study Guide Genie</h4>
+                    <span class="media-content">
+                         Developed an Adaptive Study Guide system, a hybrid recommendation system based on Collaborative Filtering &amp;
+                        Content-based recommendation for its users to create notes and cheat-sheet based on peers’ notes and Java docs
+                        from websites like Wikibooks, tutorialspoint.com. 
+                        <br>
+                        <b>Elasticsearch, PHP, MySQL, JavaScript, AJAX, Java
+                        </b>
                     </span>
                 </div>
             </div>
@@ -163,12 +215,14 @@
     <!-- Quotes -->
     <div class="row intro">
         <p>
-            "There is no charge for Awesomeness or Attractiveness" &nbsp;&nbsp;- Kung Fu Panda
+           On a Journey to become a <b>JavaScript</b> pro!  
         </p>
     </div>
 </main>
-
-
+</div>
+<!-- 
+"There is no charge for Awesomeness or Attractiveness" &nbsp;&nbsp;- Kung Fu Panda
+ -->
 <!-- Google Analytics -->
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -183,14 +237,19 @@
 <!-- End Google Analytics -->
 <script src="bot.js"></script>
 
-<link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="animatedModal.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!-- <script src="http//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 
-</div>
+ 
+
 </body>
+
+    
 
 </html>
 

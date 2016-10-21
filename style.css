@@ -35,11 +35,11 @@ a:visited {
         font-size: 1.9em;
     }
 
-    .media-object {
-        width:70px;
+    .workex .media-object {
+        width:50px;
     }
  
-    .media {
+    .workex .media {
         padding: 5px;
         text-align: justify; 
     }
@@ -61,14 +61,25 @@ a:visited {
     }
 
     .media-object {
-        width:100px;
+        width:90px;
     }
 
-    .media {
+    .workex .media {
         display: inline-block;
         width: 49%;
         padding: 10px; 
         vertical-align: text-top;
+    }
+
+    .projects .media {
+        display: inline-block;
+        width: 49%;
+        padding-left: 30px;
+        vertical-align: text-top;
+    }
+
+    .projects {
+        padding-bottom: 30px;
     }
 
 }
@@ -128,10 +139,9 @@ a:visited {
 }
 
 .media {
-    
     text-align: justify;
-    
 }
+
 .media-heading {
     font-family: "Century Gothic";
 }
