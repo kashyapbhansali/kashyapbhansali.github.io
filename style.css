@@ -128,7 +128,7 @@ a:visited {
     padding: 10px;
     font-family: "Century Gothic";
     background-color: #282828;
-    color: var(--header-dark-text);
+    color: #f8f8f8;
     animation: fadein 2s;
 }
 
