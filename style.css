@@ -87,10 +87,10 @@ a:visited {
 
     .projects1 .proj-box {
         display: inline-block;
-        width: 23%;
+        width: 25%;
         height: auto;
         text-align: center;
-        margin: 5%;
+        margin: 3.9%;
         margin-top: 10px;
         margin-bottom: 0px;
         //border: 1px solid;
