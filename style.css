@@ -94,11 +94,13 @@ a:visited {
         margin: 3.9%;
         margin-top: 10px;
         margin-bottom: 0px;
-        //border: 1px solid;
+        border-bottom: 3px dashed;
+        //border-left: 3px solid;
+        border-color: #f9f9f9;
         padding: 2%;
         vertical-align: text-top;
         //background: #fafafa;
-        //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         font-family: "Helvetica","Century Gothic";
     }
 
