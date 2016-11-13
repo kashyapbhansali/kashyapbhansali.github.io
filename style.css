@@ -124,9 +124,9 @@ a:visited {
     }
 
     .proj-box:hover {
-        box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.2);
-        //background: white;
-        //border-bottom: 1px solid;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background: whitesmoke;
+        border: 0px;
     }
 
     .proj-box h4 {
@@ -177,10 +177,6 @@ a:visited {
 
 }
 
-.contact {
-    color: white;
-    background: #CC3333; //#2ECC71;
-}
 
 .projects1 p {
     font-weight: bold;
