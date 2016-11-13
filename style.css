@@ -88,15 +88,15 @@ a:visited {
 
     .projects1 .proj-box {
         display: inline-block;
-        width: 25%;
+        width: 22%;
         height: auto;
         text-align: center;
-        margin: 3.9%;
+        margin: 5.4%;
         margin-top: 10px;
         margin-bottom: 0px;
-        border-bottom: 3px dashed;
+        //border: 3px solid;
         //border-left: 3px solid;
-        border-color: #f9f9f9;
+        border-color: #898989;
         padding: 2%;
         vertical-align: text-top;
         //background: #fafafa;
@@ -124,7 +124,9 @@ a:visited {
     }
 
     .proj-box:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.2);
+        //background: white;
+        //border-bottom: 1px solid;
     }
 
     .proj-box h4 {
@@ -137,6 +139,10 @@ a:visited {
 
     .projects1 h4 {
         padding-top: 2%;
+
+    }
+    .project-row {
+        background: url(bg.png);
     }
 
     .project-container {
@@ -171,6 +177,10 @@ a:visited {
 
 }
 
+.contact {
+    color: white;
+    background: #CC3333; //#2ECC71;
+}
 
 .projects1 p {
     font-weight: bold;
@@ -229,11 +239,12 @@ a:visited {
 }
 
 .space {
-    //background-color: #fcfcfc;
+    padding-top: 20px;
     animation: fadein 2s;
 
 }
 .space  h2 {
+    font-size: 40px;
     text-align: center;
     font-family: "Century Gothic";
 }
