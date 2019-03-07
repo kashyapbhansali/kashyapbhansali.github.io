@@ -198,9 +198,11 @@ a:visited {
 /*  Header */
 .header {
     color: black;
+    height: 100vh;
+    padding-top: 5%;
     background: #43cea2;
-    background: -webkit-linear-gradient(to left, #43cea2 , #185a9d);
-    background: linear-gradient(to left, #43cea2 , #185a9d);
+    background: -webkit-linear-gradient(to left, #35c094 , #073570);
+    background: linear-gradient(to left, #35c094 , #073570);
 
 }
 
